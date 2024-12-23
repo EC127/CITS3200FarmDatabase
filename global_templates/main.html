@@ -1,0 +1,58 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Ridgefield Database</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'core/style.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <link href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css"></link>
+
+</head>
+
+<body>
+    <div id="header">
+      <div id="header-logo">
+        <a href="https://www.uwa.edu.au/">
+          <img src="{% static 'core/UWA-logo.svg' %}" alt="UWA Logo" style="height: 45px;">
+        </a>
+      </div>
+      <div id="header-title">
+        <a id="header-text" href="{% url 'index' %}">FARM RIDGEFIELD DATABASE</a>
+      </div>
+    </div>
+    {% include 'navbar.html' %}
+
+    {% block content %} 
+
+    {% endblock %}
+
+    <div class="footer">
+      <nav class="navbar navbar-expand-sm navbar-dark" id="footer-bar">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="https://www.uwa.edu.au/">University of Western Australia</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="https://www.uwa.edu.au/institutes/institute-of-agriculture/Home">UWA Institute of Agriculture</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="https://www.uwa.edu.au/institutes/institute-of-agriculture/UWA-Farm-Ridgefield">Farm Ridgefield</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+</body>
+
+</html>

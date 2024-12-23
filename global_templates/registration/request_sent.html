@@ -1,0 +1,18 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<div class="page-container">
+  <div class="container-backdrop">
+    <div class="container" style="text-align: center;">
+      <div class="card form-container">
+        <div class="card-header"><h3>Request Submitted</h3></div>
+        <div class="card-body" style="overflow: auto;">
+          <p>Your request for access to the database has been submitted. Please allow for 5 working days for your request to be reviewed.</p>
+          <hr>
+          <a href="{% url 'index' %}">Return to Index Page</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
