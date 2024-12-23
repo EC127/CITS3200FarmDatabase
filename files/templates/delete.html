@@ -1,0 +1,30 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<div class="page-container">
+  <div class="container-backdrop">
+    <div class="container" style="text-align: center;">
+      <div class="card form-container">
+        <div class="card-header"><h3>Confirm Deletion</h3></div>
+        <div class="card-body" style="overflow: auto;">
+          <form method="POST" action="">
+            {% csrf_token %}
+            <p>Are you sure you want to permanently delete the file: "{{ file.name }}"?</p>
+
+            <a href="{% url 'permanentDelete' file.id %}">
+              <button type="button" class="btn btn-danger">
+                Delete
+              </button>
+            </a>
+            <a href="{% url 'recently_deleted' %}">
+              <button type="button" class="btn btn-secondary">
+                Cancel
+              </button>
+            </a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
